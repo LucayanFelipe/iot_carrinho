@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitor RFID</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; }
+    #uid { font-size: 24px; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Último Cartão Lido:</h1>
+  <div id="uid">Nenhum</div>
+
+  <script>
+    setInterval(() => {
+      fetch('/uid')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('uid').textContent = data.uid || 'Nenhum';
+        });
+    }, 2000);
+  </script>
+</body>
+</html>
