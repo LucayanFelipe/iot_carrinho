@@ -1,39 +1,7 @@
-# astra
+# iot_carrinho
+O repositório contém a API + FRONTEND do sistema de carrinho inteligente, segue a descrição.
 
-This template should help get you started developing with Vue 3 in Vite.
+API Backend (Node.js + Express) – Aplicação Node.js responsável por receber o UID via requisição HTTP, consultar e gerenciar os dados no banco de dados MySQL, e disponibilizar endpoints para consumo do frontend.
 
-## Recommended IDE Setup
+Frontend Web (Vue.js + Pinia + Axios + Vue Router) – Interface web responsiva que consome a API para exibir os produtos lidos, funcionando como uma simulação de carrinho de compras inteligente.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
